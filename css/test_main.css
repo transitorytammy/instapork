@@ -1,0 +1,46 @@
+body{
+  font-family: 'Alegreya Sans SC', sans-serif;
+
+}
+
+
+
+}
+
+#puzzle {
+  position: relative;
+  float: left;
+  top: 0px;
+  left: 0px;
+
+}
+
+#pig{
+  position: absolute;
+  z-index: -1;
+
+}
+
+
+#ham {
+  position: absolute;
+
+}
+
+#belly {
+  position: absolute;
+  z-index: 20;
+}
+
+#butt{
+  position: absolute;
+  z-index: 20;
+}
+/*img .parts {
+  display: inline-block;
+
+}*/
+
+
+
+

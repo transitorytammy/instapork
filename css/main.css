@@ -1,6 +1,6 @@
 body{
   font-family: 'Alegreya Sans SC', sans-serif;
-
+  margin: 0;
 }
 
 header{
@@ -9,12 +9,11 @@ header{
 }
 
 nav {
-  padding: 10px 0 10px 0;
-  background: url('../img/nav.jpg') repeat;
-  text-align: center;
+  padding: 10px 0 10px 70px;
+  background: url('../img/chalkboard-background.png') repeat;
 }
 
-nav a{
+nav a, nav p{
   display: inline-block;
   font-size: 20px;
   text-decoration: none;
@@ -23,56 +22,102 @@ nav a{
   color: white;
 }
 
-
 nav a:hover {
   color: black;
   border-bottom-color: #BBB;
 }
 
-#about_me {
-  padding: 30px;
-  margin: 30px;
-}
-
-.about_me p{
-  text-align: left;
-}
-
-
 h1 {
   float: left;
   font-size: 70px;
-  padding-left: 60px; 
+  padding-left: 120px; 
   color: #303030;
   margin: 20px 0 0 0;
-
-
+  font-weight: bolder;
 }
 
-#pig {
-  display: block;
+.button {
+  border-radius: 15px;`
+  padding: 4px 10px 4px 10px;
+  background: #C0C0C0;
+  text-align: center;
+  color: #303030;
+  margin-right: 2px;
+  font-weight: bold;
+  margin-top: 2px;
+  width: 180px;
+  cursor: pointer;
+}
+
+.parts {
+  position: absolute;
+  cursor: pointer;
+}
+
+#pig{
   margin-left: auto;
   margin-right: auto;
-  padding: 60px;
-  margin-top: 30px;
-  margin-bottom: 60px;
+  left: 120px;
+  top: 30px;
+  height: 800px;
+  position: relative;
 }
 
-img .parts {
-  display: inline-block;
-
+#pig_shell{
+  position: absolute;
+  z-index: -1;
 }
 
+#ham{
+  left: 605px;
+  top: 130px;
+}
 
-header .header_img{
+#loin {
+  left: 430px;
+  top: 105px;
+}
+
+#butt {
+  left: 285px;
+  top: 115px;
+}
+
+#jowl {
+  top: 320px;
+  left: 170px;
+}
+
+#shoulder {
+  top: 300px;
+  left: 280px;
+}
+
+#belly {
+  top: 334px;
+  left: 420px;
+}
+
+#ribs {
+  top: 285px;
+  left: 430px;
+}
+
+#aboutHam, #aboutLoin, #aboutButt, #aboutJowl, #aboutShoulder, #aboutBelly, #aboutRibs {
+  display: none;
+  overflow: hidden;
+  background: url('../img/chalkboard-background.png');
+  color: white;
+  border-bottom: 1px solid black;
+  margin: 30px;
+  padding: 30px;
+}
+
+.info_img {
+  width: 150px;
   height: 150px;
-  width: auto;
-  display: inline-block;
-  float: right;
-  padding: 0 50px 0 0;
 }
 
-img:hover {
-  color: black;
+footer {
+  margin-bottom: 30px;
 }
-
