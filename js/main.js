@@ -1,3 +1,4 @@
+var animateDelay = 1000;
 
 $('#ham').click(function () {aboutParts('#aboutHam')});
 $('#loin').click(function () {aboutParts('#aboutLoin')});
@@ -14,10 +15,13 @@ function aboutParts(pigPart) {
   event.preventDefault();
   $(pigPart).siblings().removeClass('active').hide();
   $(pigPart).show().addClass('active');
-  $('body').animate({scrollTop:$(pigPart).position().top}), 3000;
+  $('body').animate({scrollTop:$('footer').position().top}, animateDelay);
 }
 
 function backToPig() {
-  $('#aboutHam').hide().siblings().removeClass('active').hide();
-  $('body').animate({scrollTop:$('#pig').position().top}), 3000;
+  $('body').animate({scrollTop:$('#pig').position().top}, animateDelay, hideParts);
+
+  function hideParts() {
+    $('#aboutHam').hide().siblings().removeClass('active').hide();
+  }
 }

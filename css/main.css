@@ -1,23 +1,24 @@
 body{
   font-family: 'Alegreya Sans SC', sans-serif;
-  margin: 0;
+  max-width: 1300px;
+  height:2000px;
+  overflow-x: hidden;
 }
 
 header{
   height: 125px;
-  
 }
 
 nav {
   padding: 10px 0 10px 70px;
-  background: url('../img/chalkboard-background.png') repeat;
+  background: url('../img/long_nav.jpg') repeat;
 }
 
 nav a, nav p{
   display: inline-block;
   font-size: 20px;
   text-decoration: none;
-  padding-left: 50px;
+  padding-left: 90px;
   -webkit-transition: all 300ms;
   color: white;
 }
@@ -30,7 +31,7 @@ nav a:hover {
 h1 {
   float: left;
   font-size: 70px;
-  padding-left: 120px; 
+  padding-left: 157.5px; 
   color: #303030;
   margin: 20px 0 0 0;
   font-weight: bolder;
@@ -57,9 +58,10 @@ h1 {
 #pig{
   margin-left: auto;
   margin-right: auto;
-  left: 120px;
+  /*left: 120px;*/
   top: 30px;
   height: 800px;
+  width: 950px;
   position: relative;
 }
 
@@ -103,21 +105,57 @@ h1 {
   left: 430px;
 }
 
+#aboutPig {
+
+}
+
+
 #aboutHam, #aboutLoin, #aboutButt, #aboutJowl, #aboutShoulder, #aboutBelly, #aboutRibs {
   display: none;
-  overflow: hidden;
-  background: url('../img/chalkboard-background.png');
-  color: white;
-  border-bottom: 1px solid black;
+  border-bottom: 5px solid black;
+  border: 10px solid #303030;
   margin: 30px;
   padding: 30px;
 }
+
+
 
 .info_img {
   width: 150px;
   height: 150px;
 }
 
+.subPrimal {
+  width: 25%;
+  margin-right: 10px;
+}
+
+
+.header {
+  font-weight: bold;
+}
+
+table{
+  margin-bottom: 20px;
+}
+
 footer {
   margin-bottom: 30px;
 }
+
+th {
+  text-align: left;
+  text-decoration: underline;
+}
+
+
+/* Mobile Responsive Version Here */
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 97%;
+  }
+
+
+}
+
