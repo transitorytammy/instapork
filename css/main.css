@@ -1,8 +1,5 @@
 body{
   font-family: 'Alegreya Sans SC', sans-serif;
-  max-width: 1300px;
-  height:2000px;
-  overflow-x: hidden;
 }
 
 header{
@@ -31,7 +28,7 @@ nav a:hover {
 h1 {
   float: left;
   font-size: 70px;
-  padding-left: 157.5px; 
+  padding-left: 157.5px;
   color: #303030;
   margin: 20px 0 0 0;
   font-weight: bolder;
@@ -155,7 +152,5 @@ th {
   body {
     width: 97%;
   }
-
-
 }
 
