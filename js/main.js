@@ -62,7 +62,7 @@ function backToPig() {
     for (var x=0; matches[x]; x++) {
       match = matches[x]['id'];
       console.log(match);
-      recipes.push("<li><a href=http://www.yummly.com/recipe/" + match + ">" + matches[x]['recipeName'] + "</a></li>");
+      recipes.push("<li><a href='http://www.yummly.com/recipe/" + match + "' target='_blank'>" + matches[x]['recipeName'] + "</a></li>");
       console.log(recipes);
     }
     $(".recipes").html(recipes);
