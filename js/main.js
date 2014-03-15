@@ -28,8 +28,8 @@ function aboutParts(pigPart) {
   $(pigPart).siblings().removeClass('active').hide();
   $(pigPart).show().addClass('active');
   $('#aboutPig').css("height", $(window).height());
+  getSearchMatches(pigPart);
   $('body').animate({scrollTop:$('footer').position().top}, animateDelay);
-  // recipeCall();
 }
 
 function backToPig() {
@@ -41,56 +41,34 @@ function backToPig() {
     $('#aboutPig').css("height", "0px");
 }
 
-  function query(pigPart) {
-    pigQuery[pigPart];
-    console.log(pigQuery[pigPart]);
-  }
-
-  function recipeCall () {
+  function getSearchMatches(pigPart) {
     var yummlyAPI = "http://api.yummly.com/v1/api/recipes?_app_id=87296141&_app_key=6ce4d092bd66b4777eec2f0c4a30fcc1&q=";
 
-    // var query = 
+    var apiCall = yummlyAPI + pigQuery[pigPart]; 
 
-    // your _search_parameters?callback=?;
-
-    var apiCall = yummlyAPI + query() + 
-
-    $.getJSON(yummlyAPI, function(json) {
-      if (json.length != 0) {}
-    console.log(json);
-    alert( "Load was performed." );
-  });
+    console.log(apiCall);
+    $.ajax({                                                                   
+      type: 'GET',
+       url: apiCall,
+       dataType: 'jsonp',
+       success: displayRecipes,
+       error: error               
+    });
   }
 
-// <script>
-// (function() {
-//   var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-//   $.getJSON( flickerAPI, {
-//     tags: "mount rainier",
-//     tagmode: "any",
-//     format: "json"
-//   })
-//     .done(function( data ) {
-//       $.each( data.items, function( i, item ) {
-//         $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-//         if ( i === 3 ) {
-//           return false;
-//         }
-//       });
-//     });
-// })();
-// </script>
+  function displayRecipes(data) {
+    matches = data['matches'];
+    var recipes = [];
+    for (var x=0; matches[x]; x++) {
+      match = matches[x]['id'];
+      console.log(match);
+      recipes.push("<li><a href=http://www.yummly.com/recipe/" + match + ">" + matches[x]['recipeName'] + "</a></li>");
+      console.log(recipes);
+    }
+    $(".recipes").html(recipes);
+  }
 
-
-// // ajax
-
-// X-Yummly-App-ID:87296141
-// X-Yummly-App-Key:6ce4d092bd66b4777eec2f0c4a30fcc1
-
-// _app_id=app-id&_app_key=app-key
-
-
-// The base url for the Search Recipes GET is http://api.yummly.com/v1/api/recipes?_app_id=app-id&_app_key=app-key&your _search_parameters
-
-
+  function error(data, data2) {
+    console.log("Error! " + data);
+  }
 
