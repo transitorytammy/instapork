@@ -141,6 +141,7 @@ h1 {
 h4 {
   text-decoration: underline;
   font-size: 1.2em;
+  margin-bottom: 5px;
 }
 
 li a{
@@ -160,6 +161,10 @@ footer {
 th {
   text-align: left;
   text-decoration: underline;
+}
+
+td {
+  padding-right: 5px;
 }
 
 

@@ -3,7 +3,7 @@ var pigQuery = {
   "#aboutHam": "ham",
   "#aboutLoin": "pig loin",
   "#aboutButt": "pig butt",
-  "#aboutJowl": "pig jowl",
+  "#aboutJowl": "jowl",
   "#aboutShoulder": "pig shoulder",
   "#aboutBelly": "pig belly",
   "#aboutRibs": "pig ribs"
