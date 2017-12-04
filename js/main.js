@@ -23,17 +23,15 @@ $('.button').click(backToPig);
 
 
 function aboutParts(pigPart) {
-  console.log('aboutHam clicked: ' + pigPart);
-  event.preventDefault();
   $(pigPart).siblings().removeClass('active').hide();
   $(pigPart).show().addClass('active');
   $('#aboutPig').css("height", $(window).height());
   getSearchMatches(pigPart);
-  $('body').animate({scrollTop:$('footer').position().top}, animateDelay);
+  $('body, html').animate({scrollTop:$('footer').offset().top}, animateDelay);
 }
 
 function backToPig() {
-  $('body').animate({scrollTop:$('#pig').position().top}, animateDelay, hideParts);
+  $('body, html').animate({scrollTop:$('#pig').offset().top}, animateDelay, hideParts);
 
 }
   function hideParts() {
@@ -45,8 +43,6 @@ function backToPig() {
     var yummlyAPI = "http://api.yummly.com/v1/api/recipes?_app_id=87296141&_app_key=6ce4d092bd66b4777eec2f0c4a30fcc1&q=";
 
     var apiCall = yummlyAPI + pigQuery[pigPart]; 
-
-    console.log(apiCall);
     $.ajax({                                                                   
       type: 'GET',
        url: apiCall,
@@ -61,9 +57,7 @@ function backToPig() {
     var recipes = [];
     for (var x=0; matches[x]; x++) {
       match = matches[x]['id'];
-      console.log(match);
       recipes.push("<li><a href='http://www.yummly.com/recipe/" + match + "' target='_blank'>" + matches[x]['recipeName'] + "</a></li>");
-      console.log(recipes);
     }
     $(".recipes").html(recipes);
   }

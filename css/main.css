@@ -1,25 +1,59 @@
-body{
+html {
+  box-sizing: border-box;
+}
+
+
+body {
   font-family: 'Alegreya Sans SC', sans-serif;
-  max-width: 1300px;
   overflow-x: hidden;
+  font-size: 14px;
 }
 
-header{
-  height: 125px;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-nav {
-  padding: 10px 0 10px 70px;
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #303030;
+  text-align: center;
+  margin: 5px;
+}
+
+.nav-link__wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-width: 210px;
+}
+
+.border {
   background: url('../img/long_nav.jpg') repeat;
+  padding: 15px;  
 }
 
-nav a, nav p{
-  display: inline-block;
-  font-size: 20px;
+nav a, 
+nav p {
+  color: #303030;  
+  font-size: 1.5rem;
   text-decoration: none;
-  padding-left: 90px;
   -webkit-transition: all 300ms;
-  color: white;
 }
 
 nav a:hover {
@@ -27,18 +61,7 @@ nav a:hover {
   border-bottom-color: #BBB;
 }
 
-h1 {
-  float: left;
-  font-size: 70px;
-  padding-left: 157.5px; 
-  color: #303030;
-  margin: 20px 0 0 0;
-  font-weight: bolder;
-}
-
 .button {
-  border-radius: 15px;`
-  padding: 4px 10px 4px 10px;
   background: #C0C0C0;
   text-align: center;
   color: #303030;
@@ -60,14 +83,10 @@ h1 {
   cursor: pointer;
 }
 
-#pig{
-  margin-left: auto;
-  margin-right: auto;
-  /*left: 120px;*/
-  top: 30px;
-  height: 800px;
-  width: 950px;
-  position: relative;
+#pig {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
 }
 
 #pig_shell{
@@ -144,7 +163,7 @@ h4 {
   margin-bottom: 5px;
 }
 
-li a{
+li a {
   color: #303030;
   text-decoration: none;
 }
@@ -170,11 +189,10 @@ td {
 
 /* Mobile Responsive Version Here */
 
-@media screen and (max-width: 768px) {
-  body {
-    width: 97%;
+@media screen and (min-width: 768px) {
+
+  .header-title {
+    font-size: 3.5rem;
   }
-
-
 }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf=8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" charset="utf=8">
   <title>instapork</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -9,28 +9,22 @@
 </head>
 
 <body>
-  <header>
-    <h1>InstaPork</h1>
-  </header>
-  <nav>
-    <a href='instapork_project.html'>Home</a>
-    <!-- <a href='about_me.html'>About</a> -->
-    <a href='http://baconintheafternoon.tumblr.com/' target="_blank">Food Porn</a>
-  </nav>
-  <div id='pig'>
-    <img id='pig_shell' src="img/pig_background.png"> 
-    <img id="ham" class="parts" src="img/ham.png">
-    <img id="loin" class="parts" src="img/loin.png">
-    <img id = "butt" class="parts" src="img/butt.png">
-    <img id="jowl" class="parts" src="img/jowl.png">
-    <img id="shoulder" class="parts" src="img/shoulder.png">
-    <img id = "belly" class="parts" src="img/belly.png">
-    <img id ="ribs" class="parts" src="img/ribs.png">
+  <h1 class="header-title">InstaPork</h1>
+  <div class="border"></div>
+  <div class="pig-container">
+    <img id="pig" src="img/charcoal_pig.jpg" alt="pig parts" usemap="#pig-parts">
+    <map name="pig-parts" id="pig-parts">
+      <area class="parts" id="ham" shape="poly" coords="672,161,821,234,821,362,718,552,657,479,638,333" alt="ham">
+      <area class="parts" id="loin" shape="rect" coords="473,151,618,305" href="#" alt="loin">
+      <area class="parts" id="butt" shape="rect" coords="445,163,331,313" href="#" alt="butt">
+      <area class="parts" id="butt" shape="poly" coords="294,366,309,407,300,497,212,422,243,389" href="#" alt="butt">
+      <area class="parts" id="shoulder" shape="rect" coords="324,348,441,494" href="#" alt="shoulder">
+      <area class="parts" id="belly" shape="poly" coords="481,427,458,507,620,501,615,378" href="#" alt="belly">
+      <area class="parts" id="ribs" shape="poly" coords="470,339,616,328,610,356,476,401"  href="#" alt="ribs"/>
+    </map>
   </div>
   <footer>
-    <nav>
-      <a></a>
-    </nav>
+    <div class="border"></div>
   </footer>
   <div id='aboutPig'>
     <div id='aboutHam'>
@@ -41,18 +35,18 @@
           <table>
             <tr>
               <th class="subPrimal header">SubPrimal</th>
-              <th class="culinaryUse header">Common Culinary Uses</th> 
+              <th class="culinaryUse header">Common Culinary Uses</th>
             </tr>
             <tr>
               <td class="subPrimal">Shank/Hock</td>
               <td>Common cooking methods include stewing and braising.  Meat often prepared smoked or corned.</td>
             </tr>
             <tr>
-              <td class="subPrimal">Ham (bone-in or boneless)</td> 
+              <td class="subPrimal">Ham (bone-in or boneless)</td>
               <td>Fresh ham roast (bone-in, BRT), inside hame RTE, baked, thin sliced smoked hame (wet, cured, half or whole, butt/shank); boiled ham (wet cured, cooked to 145&degF); proscuitto ham (salted and dry cured long term); Smithfield ham (dry cured and smoked).</td>
             </tr>
             <tr>
-              <td class="subPrimal">Top round</td> 
+              <td class="subPrimal">Top round</td>
               <td>Saut&eacuteing is the most common cooking method.  Meat is often prepared as cutlets.</td>
             </tr>
           </table>
@@ -77,22 +71,22 @@
           <table>
             <tr>
               <th class="subPrimal header">SubPrimal</th>
-              <th class="culinaryUse header">Common Culinary Uses</th> 
+              <th class="culinaryUse header">Common Culinary Uses</th>
             </tr>
             <tr>
               <td class="subPrimal">Center-cut pork loin</td>
               <td>Common cooking methods include roasting, grilling, broiling, and saut&eacuteing.  Meat often prepared as a roast (bone-in, boneless), frenched, smoked, chops (bone-in) or as Canadian style bacon.</td>
             </tr>
             <tr>
-              <td class="subPrimal">Boneless loin (eye muscle)</td> 
+              <td class="subPrimal">Boneless loin (eye muscle)</td>
               <td>Common cooking methods include grilling, broiling, and saut&eacuteing.  Meat often perpared as cutlest, medallions or schnitzel.</td>
             </tr>
             <tr>
-              <td class="subPrimal">Baby back ribs</td> 
+              <td class="subPrimal">Baby back ribs</td>
               <td>Barbequing is the most common cooking method.</td>
             </tr>
             <tr>
-              <td class="subPrimal">Tenderloin</td> 
+              <td class="subPrimal">Tenderloin</td>
               <td>Common cooking methods include roasting and saut&eacuteing.</td>
             </tr>
           </table>
@@ -103,9 +97,9 @@
           </div>
           <div class='button'>
             <a>Back to the whole pig!</a>
-          </div>      
+          </div>
         </div>
-    </div> 
+    </div>
     <div id='aboutButt'>
         <div>
           <img class = 'info_img' src='img/bone_in_shoulder_boston_butt.jpg'>
@@ -113,14 +107,14 @@
           <table>
             <tr>
               <th class="subPrimal header">SubPrimal</th>
-              <th class="culinaryUse header">Common Culinary Uses</th> 
+              <th class="culinaryUse header">Common Culinary Uses</th>
             </tr>
             <tr>
               <td class="subPrimal">Boston butt (bone-in, boneless)</td>
               <td>Common cooking methods include roasting, stewing, and saut&eacuteing.  Meat often prepared as forcemeat or sausages.</td>
             </tr>
             <tr>
-              <td class="subPrimal">Cottage butt</td> 
+              <td class="subPrimal">Cottage butt</td>
               <td>Common cooking methods include roasting or frying as bacon.  Meat often prepared as a roast (fresh) or smoked (English bacon).</td>
             </tr>
           </table>
@@ -141,7 +135,7 @@
           <table>
             <tr>
               <th class="subPrimal header">SubPrimal</th>
-              <th class="culinaryUse header">Common Culinary Uses</th> 
+              <th class="culinaryUse header">Common Culinary Uses</th>
             </tr>
             <tr>
               <td class="subPrimal">Jowl; Snout; Neckbones; Liver; Heart; Feet; Toes; Tail; Intestines; Kidneys; Caul fat</td>
@@ -165,7 +159,7 @@
           <table>
             <tr>
               <th class="subPrimal header">SubPrimal</th>
-              <th class="culinaryUse header">Common Culinary Uses</th> 
+              <th class="culinaryUse header">Common Culinary Uses</th>
             </tr>
             <tr>
               <td class="subPrimal">Picnic (bone-in or boneless)</td>
@@ -189,14 +183,14 @@
           <table>
             <tr>
               <th class="subPrimal header">SubPrimal</th>
-              <th class="culinaryUse header">Common Culinary Uses</th> 
+              <th class="culinaryUse header">Common Culinary Uses</th>
             </tr>
             <tr>
               <td class="subPrimal">Belly (bacon, pancetta, salt pork, fresh)</td>
               <td>When fresh, this cut is most often saut&eacuteed.  Other forms are most often fried.</td>
             </tr>
             <tr>
-              <td class="subPrimal">Fatback (fresh, salt)</td> 
+              <td class="subPrimal">Fatback (fresh, salt)</td>
               <td>Meat often pepared as lardons, cassoulet, p&acirct&eacute; , and terrines.</td>
             </tr>
           </table>
@@ -217,10 +211,10 @@
           <table>
             <tr>
               <th class="subPrimal header">SubPrimal</th>
-              <th class="culinaryUse header">Common Culinary Uses</th> 
+              <th class="culinaryUse header">Common Culinary Uses</th>
             </tr>
             <tr>
-              <td class="subPrimal">Spare ribs, St. Louis ribs (trimmed)</td> 
+              <td class="subPrimal">Spare ribs, St. Louis ribs (trimmed)</td>
               <td>Common cooking methods include barbecuing and braising.</td>
             </tr>
           </table>
@@ -234,8 +228,31 @@
           </div>
         </div>
     </div>
+    <nav class="nav">
+        <ul class="nav-link__wrapper">
+          <li class="nav-twitter">
+            <a href="https://twitter.com/_instapork">
+              <img src="img/twitter.svg" alt="twitter account for instapork">
+            </a>
+          </li>
+          <li class="nav-instagram">
+              <a href="https://www.instagram.com/_instapork/">
+                <img src="img/instagram.svg" alt="instagram account for instapork">
+              </a>
+            </li>
+          <li>
+            <a href='http://baconintheafternoon.tumblr.com/' target="_blank">Food Porn</a>
+          </li>
+        </ul>
+      </nav>
   </div>
+  </html>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/rwdImageMaps.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(e) {
+          $('img[usemap]').rwdImageMaps();
+      });
+  </script>
 </body>
-</html>
